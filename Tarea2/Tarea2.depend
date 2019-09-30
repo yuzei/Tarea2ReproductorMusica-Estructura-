@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1568499339 source:c:\users\usuario\documents\notepad\c\estructura de datos\basico\tarea2\lista.c
+	<stdlib.h>
+	"lista.h"
+	<assert.h>
+
+1569869076 c:\users\usuario\documents\notepad\c\estructura de datos\basico\tarea2\lista.h
+
+1569703032 source:c:\users\usuario\documents\notepad\c\estructura de datos\basico\tarea2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+	<stdbool.h>
+
+1569716356 source:c:\users\usuario\documents\notepad\c\estructura de datos\basico\tarea2\hash.c
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<math.h>
+	"hash.h"
+
+1569869076 c:\users\usuario\documents\notepad\c\estructura de datos\basico\tarea2\hash.h
+
