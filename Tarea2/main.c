@@ -42,49 +42,84 @@ int main()
     char cancion[101];
     int minutos;
     int segundos;
-    int opcion;
+  typedef struct{ //
+	char nombre_album[];
+	char nombre_cancion[];
+	char autor[];
+	char duracion[];
+}Album;//estructura para la lectura de csv
 
-    do{
-        printf("       Gestionador de Musica de Rodolfo \n");
-        printf("|---------------------------------------------|\n");
-        printf("| 1.- Importar musica desde un archivo '.csv' |\n");
-        printf("| 2.- Exportar musica a un '.csv'             |\n");
-        printf("| 3.- Agregar album                           |\n");
-        printf("| 4.- Agregar cancion                         |\n");
-        printf("| 5.- Eliminar canciones de un artista        |\n");
-        printf("| 6.- Buscar cancion                          |\n");
-        printf("| 7.- Buscar canciones de un Artista          |\n");
-        printf("| 8.- Buscar album                            |\n");
-        printf("| 9.- Salir del Gestionador                   |\n");
-        printf("|_____________________________________________|\n");
-        scanf("%d", &opcion);
-        switch(opcion){
-        case 1:
-            
-            break;
-        case 2:
+typedef struct{
+	char nombre[];
+	char autor[];
+	char duracion[];
+}cancion;
 
-            break;
-        case 3:
-
-            break;
-        case 4:
-
-            break;
-        case 5:
-
-            break;
-        case 6:
-
-            break;
-        case 7:
-
-            break;
-        case 8:
-
-            break;
-        default : printf("Opcion Invalida! \n");
+typedef struct{
+	char autor[];
+	list * canciones;
+}artista;
+//-----------------------------------------------------------------------------------------
+int op;
+char linea[1024];
+FILE * fp = fopen("canciones.csv","r");
+FILE * fp = fopen("canciones1.csv","w");
+    
+printf("                             MENU\n");
+printf("                        1- Importar musica\n");
+printf("                        2- Exportar musica\n");
+printf("                        3- Agregar Album\n");
+printf("                        4- eliminar artista\n");
+printf("                        5- buscar cancion\n");
+printf("                        6- buscar artista\n");
+printf("                        7- buscar album \n");
+printf("         ingrese opcion: ");
+scanf("%d",&op);
+    switch(op){
+	case 1:
+            while(fgets (linea, 1023, fp) != NULL) {
+           strcpy(nombre, strtok(linea,","));
+           strcpy( , strtok(, ","));
+           strcpy( , strtok(, ",")));
+           list_push_back (, );
+           = malloc(sizeof());
         }
-    }while(opcion != 9);
-    return 0;
-}
+
+	
+	break;
+	case 2:
+	    
+	break;
+	case 3:
+		printf("ingrese nombre del album\n");
+		scanf("%s",&nombre);
+		if(){//se busca si el album existe:
+		//si es asi
+			printf("el album ya existe\n");
+			do{
+				printf("desea agregarle canciones? 0-si, 1-no\n");
+				scanf("%d",&resp);
+				if(resp==0){
+					ingrese los sgtes datos:\n
+					titulo
+					scanf("%s",&titulo);
+					artista
+					scanf("%s",&);
+				}
+			}while(resp == 1)
+		else//sino existe
+		
+	break;
+	case 4:
+	
+	break;
+	case 5:
+	
+	break;
+	case 6:
+	
+	break;
+	case 7:
+	
+	break;
+	}
